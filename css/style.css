@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica;
+}
+
+/* Using Flex Box for Single Column Part of Contact Card*/
+.contact-card {
+    /* Shifting card away from boundary */
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column; /*display children on top of one another*/
+    align-items: center; /*center everything*/
+    width: 300px;
+    background-color: lightgreen;
+    border-radius: 10px; /*rounding the corners*/
+    padding: 20px;
+    gap: 10px; /*spacing between each child element*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /*give it a light shadow for 3d effect*/
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /*rounding the avatar img*/
+    background-color: white;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.rating-section img {
+    width: 100px;
+    height: auto;
+}
+
+.job-title {
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+/*Promo should be bolded*/
+.cost-section #promo {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Fine print is fine & slanted*/
+.cost-section #fine-print {
+    margin: 5px 0 10px 0;
+    font-size: 12.5px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/*Using grid for the buttons so they can reside next to each other*/
+
+.button-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Need 2 columns*/
+    gap: 20px;
+    width: 100%;
+}
+
+.button-section button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px; /*slightly round buttons*/
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-section img {
+    width: 20px;
+    height: auto;
+}
